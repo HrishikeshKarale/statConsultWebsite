@@ -1,5 +1,10 @@
 export default interface navigationLinkType {
-    id: Number,
-    name: String,
-    component: String
-  };
+  name: String,
+  component: String,
+  // optional
+  child?: [{
+      name: String,
+      component: String,
+    }
+  ]
+};
