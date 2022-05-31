@@ -1,11 +1,11 @@
 <template>
   <article>
     I am DATA MANAGEMENT
-  </article>  
+  </article>
 </template>
 
 <script>
 export default {
-  name: 'dataMgmt',
+  name: 'DataMgmt'
 }
 </script>

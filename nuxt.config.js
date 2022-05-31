@@ -18,10 +18,10 @@ export default {
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
-    '@/assets/css/main.css',
+    '@/assets/css/main.css'
   ],
 
-  // 
+  //
   fontawesome: {
     icons: {
       solid: ['faChevronDown'],
@@ -68,9 +68,9 @@ export default {
     postcss: {
       plugins: {
         tailwindcss: {},
-        autoprefixer: {},
-      },
-    },
+        autoprefixer: {}
+      }
+    }
   },
 
   server: {
@@ -82,6 +82,6 @@ export default {
 
   publicRuntimeConfig: {
     senderID: process.env.SENDER_EMAIL_ID | false,
-    senderPassword: process.env.SENDER_EMAIL_PASSWORD | false,
+    senderPassword: process.env.SENDER_EMAIL_PASSWORD | false
   }
 }

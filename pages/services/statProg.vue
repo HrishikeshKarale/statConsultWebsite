@@ -1,11 +1,11 @@
 <template>
   <article>
     I am STASTICAL PROGRAMMING
-  </article>  
+  </article>
 </template>
 
 <script>
 export default {
-  name: 'statProg'
+  name: 'StatProg'
 }
 </script>

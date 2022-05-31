@@ -1,11 +1,11 @@
 <template>
   <article>
     I am BIOSTASTICS
-  </article>  
+  </article>
 </template>
 
 <script>
 export default {
-  name: 'bioStat',
+  name: 'BioStat'
 }
 </script>
