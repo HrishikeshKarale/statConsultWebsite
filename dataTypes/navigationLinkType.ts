@@ -2,9 +2,8 @@ export default interface navigationLinkType {
   name: String,
   component: String,
   // optional
-  child?: [{
+  child?: {
       name: String,
       component: String,
-    }
-  ]
+    }[]
 };

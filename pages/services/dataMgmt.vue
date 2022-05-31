@@ -1,13 +1,11 @@
 <template>
-  <div>
+  <article>
     I am DATA MANAGEMENT
-  </div>  
+  </article>  
 </template>
 
 <script>
 export default {
   name: 'dataMgmt',
-
-  layout: 'masterSlave',
 }
 </script>

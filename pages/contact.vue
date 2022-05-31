@@ -1,132 +1,18 @@
 <template>
 	<article class="flex flex-col gap-8">
 			<h1 class="flex flex-row flex-nowrap items-center gap-4 h-32 px-16 font-medium leading-tight text-5xl m-0 text-gray-800 bg-gradient-to-r from-orange-500 to-orange-200"><span class="font-bold">Contact</span>Me</h1>
+
 			<p class="text-base font-light leading-relaxed mt-0 mb-4 px-16">
 				Visit us or simply send us an email anytime you want. If you have any questions, please feel free to contact us.
 			</p>
 
 			<section class="flex flex-row flex-nowrap  justify-start gap-16 px-16">
-			<!-- <vue-modal
-				tag="loginScreen"
-				text="Form"
-				:display="showForm"
-				@display="
-					val => {
-						showForm = val;
-					}
-				"
-			> -->
-				<!-- <vue-form
-					:ctx="sendMail.bind(this)"
-					tag="contactForm"
-					title="Contact Form"
-					description="Please fill out the form and Hrishikesh will get in touch with you in a few days."
-					:alertID="{ parent: 'contactForm', child: null }"
-					:alertMessage="
-						alertObject
-							.filter(
-								alert =>
-									(alert.src.parent === 'contactForm') &
-									(alert.src.child === null)
-							)
-							.pop()
-					"
-					:validate="!booleanTrue"
-					:isAutocomplete="booleanTrue"
-				>
-					<text-input
-						v-model="sender"
-						label="Name"
-						tag="senderName"
-						placeholder="John Doe"
-						:isRequired="booleanTrue"
-						:alertID="{ parent: 'contactForm', child: 'senderName' }"
-						:alertMessage="
-							alertObject
-								.filter(
-									alert =>
-										(alert.src.parent === 'contactForm') &
-										(alert.src.child === 'senderName')
-								)
-								.pop()
-						"
-						@value="val => (sender = val)"
-						@notify="alert"
-					/>
-					<email-input
-						v-model="email"
-						label="Email"
-						tag="senderEmail"
-						placeholder="JDoe@email.com"
-						icon="far fa-envelope"
-						:isRequired="booleanTrue"
-						:alertID="{ parent: 'contactForm', child: 'senderEmail' }"
-						:alertMessage="
-							alertObject
-								.filter(
-									alert =>
-										(alert.src.parent === 'contactForm') &
-										(alert.src.child === 'senderEmail')
-								)
-								.pop()
-						"
-						@value="val => (email = val)"
-						@notify="alert"
-					/>
-					<phone-input
-						v-model="phone"
-						label="Phone number"
-						tag="senderPhone"
-						placeholder="(555) 555-5555"
-						:alertID="{ parent: 'contactForm', child: 'senderPhone' }"
-						:alertMessage="
-							alertObject
-								.filter(
-									alert =>
-										(alert.src.parent === 'contactForm') &
-										(alert.src.child === 'senderPhone')
-								)
-								.pop()
-						"
-						@value="val => (phone = val)"
-						@notify="alert"
-					/>
-					<checkbox-input
-						v-show="phone"
-						type="radio"
-						label="Preffered means of communication?"
-						tag="modeOfCommunication"
-						:value="preffered"
-						:options="options"
-						:box="booleanTrue"
-						:isRequired="booleanTrue"
-						@value="val => (preffered = val)"
-					/>
-					<vue-textarea
-						v-model="comment"
-						label="message"
-						tag="senderMessage"
-						placeholder="message"
-						:isRequired="booleanTrue"
-						:alertID="{ parent: 'contactForm', child: 'senderMessage' }"
-						:alertMessage="
-							alertObject
-								.filter(
-									alert =>
-										(alert.src.parent === 'contactForm') &
-										(alert.src.child === 'senderMessage')
-								)
-								.pop()
-						"
-						@value="val => (comment = val)"
-						@notify="alert"
-					/>
-				</vue-form> -->
         <!-- <modal title="Contact form"> -->
 				<form class="flex flex-col gap-4 w-fit">
 					<h4 class="font-medium leading-tight text-2xl text-gray-800">
 						Please fill out the form to connect with us.
 					</h4>
+
 					<div class="flex flex-col gap-8 text-red">
 						<!-- sender name -->
 						<div class="relative z-0 w-full group">
@@ -137,6 +23,7 @@
 								v-model="sender"
 								required
 							/>
+							
 							<label
 								for="floating_first_name"
 								class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
@@ -316,23 +203,20 @@
 					</div>
 				</div>
         <!-- </modal> -->
-			<!-- </vue-modal> -->
-		<!-- <p>
-			Hello, My name is Hrishikesh Karale and I live in Upstate New York.
-		</p> -->
 			</section>
 	</article>
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
-import Modal from '~/components/Modal.vue'
+// import Modal from '~/components/modal.vue'
 // import sendMail from "~/js/sendMail"
 import axios from "axios"
 
 export default Vue.extend({
-  components: { Modal },
-  name: 'contact',
+	name: 'contact',
+
+  // components: { Modal },
 
   layout: 'masterSlave',
 

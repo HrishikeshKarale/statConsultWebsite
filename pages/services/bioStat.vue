@@ -1,13 +1,11 @@
 <template>
-  <div>
+  <article>
     I am BIOSTASTICS
-  </div>  
+  </article>  
 </template>
 
 <script>
 export default {
   name: 'bioStat',
-
-  layout: 'masterSlave',
 }
 </script>

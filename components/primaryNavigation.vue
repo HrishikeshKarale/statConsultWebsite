@@ -70,7 +70,7 @@ import Vue from 'vue'
 import navigationLinkType from '@/dataTypes/navigationLinkType'
 
 export default Vue.extend({
-  name: 'Navigation',
+  name: 'PrimaryNavigation',
 
   data() {
     const navigationLinks: navigationLinkType[] = [{
