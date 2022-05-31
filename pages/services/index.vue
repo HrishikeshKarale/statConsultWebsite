@@ -1,7 +1,7 @@
 <template>
   <article>
     I am Service
-  </article>  
+  </article>
 </template>
 
 <script>

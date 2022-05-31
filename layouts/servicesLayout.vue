@@ -1,6 +1,8 @@
 <template>
   <master-slave>
-    <h1 class="flex flex-row flex-nowrap items-center gap-4 h-32 px-16 font-medium leading-tight text-5xl m-0 text-gray-800 bg-gradient-to-r from-orange-500 to-orange-200"><span class="font-bold">Services</span>We Offer</h1>
+    <h1 class="flex flex-row flex-nowrap items-center gap-4 h-32 px-16 font-medium leading-tight text-5xl m-0 text-gray-800 bg-gradient-to-r from-orange-500 to-orange-200">
+      <span class="font-bold">Services</span>We Offer
+    </h1>
     <p class="text-base font-light leading-relaxed mt-0 mb-4 px-16">
       Visit us or simply send us an email anytime you want. If you have any questions, please feel free to contact us.
     </p>
@@ -21,7 +23,7 @@
       </ul>
     </nav>
     <Nuxt />
-  </master-slave>  
+  </master-slave>
 </template>
 
 <script lang="ts">
@@ -34,20 +36,20 @@ export default {
     masterSlave
   },
 
-  data() {
-    const child: navigationLinkType[]= [{
-        name: 'BIOSTASTICS',
-        component: 'bioStat',
-      },
-      {
-        name: 'DATA MANAGEMENT',
-        component: 'dataMgmt',
-      },
-      {
-        name: 'STASTICAL PROGRAMMING',
-        component: 'statProg',
-      }
-    ];
+  data () {
+    const child: navigationLinkType[] = [{
+      name: 'BIOSTASTICS',
+      component: 'bioStat'
+    },
+    {
+      name: 'DATA MANAGEMENT',
+      component: 'dataMgmt'
+    },
+    {
+      name: 'STASTICAL PROGRAMMING',
+      component: 'statProg'
+    }
+    ]
     return {
       child
     }
