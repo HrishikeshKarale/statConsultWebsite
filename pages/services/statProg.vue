@@ -1,13 +1,11 @@
 <template>
-  <div>
+  <article>
     I am STASTICAL PROGRAMMING
-  </div>  
+  </article>  
 </template>
 
 <script>
 export default {
-  name: 'statProg',
-
-  layout: 'masterSlave',
+  name: 'statProg'
 }
 </script>

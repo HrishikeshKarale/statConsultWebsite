@@ -18,13 +18,15 @@
 
 			<!-- navigation -->
 			<header class="bg-stone-800">
-				<Navigation />
+				<primary-navigation />
 			</header>
 		</div>
 
 		<!-- slave -->
 		<main class="flex flex-col gap-4">
 			<Nuxt />
+			<!-- <Nuxt v-if="!$slots.default" /> -->
+    	<!-- <slot /> -->
 		</main>
 	</div>
 </template>
