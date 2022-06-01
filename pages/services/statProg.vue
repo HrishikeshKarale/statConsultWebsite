@@ -1,7 +1,7 @@
 <template>
-  <article>
+  <h3 class="font-medium leading-tight text-3xl">
     I am STASTICAL PROGRAMMING
-  </article>  
+  </h3>
 </template>
 
 <script>

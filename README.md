@@ -10,8 +10,10 @@ $ npm install
 $ npm run dev
 
 # build for production and launch server
-$ npm run build
+$ npm run build (npm version 14.17.0)
 $ npm run start
+
+$npm run deploy (npm version 18.2.0)
 
 # generate static project
 $ npm run generate
