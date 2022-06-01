@@ -18,15 +18,58 @@
 
       <!-- navigation -->
       <header class="bg-stone-800">
-        <primary-navigation />
+        <primary-navigation :nav="navigationLinks" />
       </header>
     </div>
 
     <!-- slave -->
     <main class="flex flex-col gap-4">
+      <!-- breadcrumbs -->
+      <breadcrumbs :nav="navigationLinks" />
+      <!-- Content -->
       <Nuxt />
-      <!-- <Nuxt v-if="!$slots.default" /> -->
-      <!-- <slot /> -->
     </main>
   </div>
 </template>
+
+<script lang="ts">
+import navigationLinkType from '@/dataTypes/navigationLinkType'
+
+export default {
+  data () {
+    const navigationLinks: navigationLinkType[] = [{
+      name: 'Home',
+      component: 'index'
+    },
+    {
+      name: 'Services',
+      component: 'services',
+      child: [{
+        name: 'BIOSTASTICS',
+        component: 'bioStat'
+      },
+      {
+        name: 'DATA MANAGEMENT',
+        component: 'dataMgmt'
+      },
+      {
+        name: 'STASTICAL PROGRAMMING',
+        component: 'statProg'
+      }
+      ]
+    },
+    {
+      name: 'About',
+      component: 'about'
+    },
+    {
+      name: 'Contact',
+      component: 'contact'
+    }
+    ]
+    return {
+      navigationLinks
+    }
+  },
+}
+</script>

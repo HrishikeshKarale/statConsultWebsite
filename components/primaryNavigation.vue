@@ -1,6 +1,6 @@
 <template>
-  <nav class="px-16 sm:px-4 py-4">
-    <div class="container flex flex-wrap justify-between items-center">
+  <nav class="px-8 py-4">
+    <div class="flex flex-wrap justify-between items-center">
       <div class="flex gap-16  items-end">
         <a href="https://flowbite.com" class="flex items-center">
           <img src="../assets/logo.svg" class="mr-3 h-6 sm:h-9" alt="Flowbite Logo">
@@ -9,7 +9,7 @@
         <div id="mobile-menu-4" class="hidden justify-between items-center w-full md:flex md:w-auto">
           <ul class="flex flex-col gap-16 md:flex-row md:mt-0 md:text-sm md:font-medium">
             <li
-              v-for="element in navigationLinks"
+              v-for="element in nav"
               :key="element.component"
               class="group w-fit"
             >
@@ -27,7 +27,7 @@
               </NuxtLink>
               <div
                 v-if="element.child"
-                class="hidden group-hover:block fixed bg-gray-200"
+                class="hidden group-hover:block absolute bg-orange-50 rounded-lg"
               >
                 <ul class="flex flex-col gap-4 px-4 py-3 md:mt-0 md:text-sm md:font-medium">
                   <li
@@ -67,45 +67,15 @@
 
 <script lang="ts">
 import Vue from 'vue'
-import navigationLinkType from '@/dataTypes/navigationLinkType'
 
 export default Vue.extend({
   name: 'PrimaryNavigation',
-
-  data () {
-    const navigationLinks: navigationLinkType[] = [{
-      name: 'Home',
-      component: 'index'
-    },
-    {
-      name: 'Services',
-      component: 'services',
-      child: [{
-        name: 'BIOSTASTICS',
-        component: 'bioStat'
-      },
-      {
-        name: 'DATA MANAGEMENT',
-        component: 'dataMgmt'
-      },
-      {
-        name: 'STASTICAL PROGRAMMING',
-        component: 'statProg'
-      }
-      ]
-    },
-    {
-      name: 'About',
-      component: 'about'
-    },
-    {
-      name: 'Contact',
-      component: 'contact'
+  
+  props: {
+    nav: {
+      type: Array,
+      required: true
     }
-    ]
-    return {
-      navigationLinks
-    }
-  }
+  },
 })
 </script>
