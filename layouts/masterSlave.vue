@@ -28,6 +28,8 @@
       <breadcrumbs :nav="navigationLinks" />
       <!-- Content -->
       <Nuxt />
+      <!-- footer -->
+      <footer-component />
     </main>
   </div>
 </template>
