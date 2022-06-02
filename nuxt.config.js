@@ -24,7 +24,7 @@ export default {
   //
   fontawesome: {
     icons: {
-      solid: ['faChevronDown'],
+      solid: ['faChevronDown', 'faPhone'],
       regular: [],
       brands: ['faTwitter', 'faInstagram']
     }

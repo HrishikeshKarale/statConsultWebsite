@@ -19,6 +19,8 @@
 
       <!-- Content -->
       <Nuxt />
+      <!-- footer -->
+      <footer-component />
     </main>
 
     <!-- footer -->
