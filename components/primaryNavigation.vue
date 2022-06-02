@@ -1,5 +1,5 @@
 <template>
-  <nav class="px-8 py-4">
+  <nav class="px-8 py-4 bg-stone-800">
     <div class="flex flex-wrap justify-between items-center">
       <div class="flex gap-16  items-end">
         <a href="https://flowbite.com" class="flex items-center">

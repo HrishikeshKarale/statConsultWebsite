@@ -1,8 +1,9 @@
 <template>
-  <div class="flex flex-col">
-    <!-- masterSlaveLayout is autoImported here -->
-    HomePage
-  </div>
+  <article class="flex flex-col">
+    <header>
+      HomePage
+    </header>
+  </article>
 </template>
 
 <script lang="ts">

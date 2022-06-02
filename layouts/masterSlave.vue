@@ -1,34 +1,28 @@
 <template>
   <div class="masterSlaveLayout flex flex-col gap-8">
     <!-- master -->
-    <div class="flex flex-col sticky top">
+    <div class="flex flex-col">
       <!-- banner -->
-      <div class="flex flex-row-reverse gap-8 px-4 h-48px bg-orange-500  text-white">
-        <div class="flex flex-row flex-nowrap gap-2 items-center">
-          <font-awesome-icon icon="fa-brands fa-twitter" class="p-2" style="font-size: 24px;" />
-
-          <font-awesome-icon icon="fa-brands fa-instagram" class="p-2" style="font-size: 24px;" />
-        </div>
-
-        <address class="flex items-center">
-          call now:
-          <a href="tel:585-520-7382" class="p-3 text-bold"> ( 585 ) 520-7382 </a>
-        </address>
-      </div>
+      <address class="flex flex-row-reverse gap-2 px-4 py-1 bg-orange-500  text-white items-center" aria-label="contact number">
+        <a href="tel:585-520-7382" class="text-bold"> ( 585 ) 520-7382 </a>
+        <font-awesome-icon icon="fa-solid fa-phone" />
+      </address>
 
       <!-- navigation -->
-      <header class="bg-stone-800">
-        <primary-navigation :nav="navigationLinks" />
-      </header>
+        <primary-navigation class="" :nav="navigationLinks" />
     </div>
 
     <!-- slave -->
-    <main class="flex flex-col gap-4">
+    <main class="flex flex-col gap-4 min-h-screen">
       <!-- breadcrumbs -->
       <breadcrumbs :nav="navigationLinks" />
+
       <!-- Content -->
       <Nuxt />
     </main>
+
+    <!-- footer -->
+    <footer-component />
   </div>
 </template>
 

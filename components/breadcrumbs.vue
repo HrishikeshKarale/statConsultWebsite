@@ -1,6 +1,6 @@
 <template>
 	<nav class="flex px-16" aria-label="Breadcrumb">
-		<ol class="flex flex-row flws-nowrap gap-4 items-center">
+		<ol class="flex flex-nowrap gap-2 items-center">
 			<li
 				v-for="(crumb, index) in breadCrumbs()"
 				:key="crumb.component" 
@@ -8,20 +8,22 @@
 				:aria-current="index === breadCrumbs.length-1? 'page':'path'"
 			>
       <!-- creates a linked crumb -->
-				<NuxtLink v-if="index !== breadCrumbs().length-1" :to="{name: crumb.component}" class="inline-flex gap-2 items-center font-medium text-orange hover:text-orange-500 dark:text-gray-400 dark:hover:text-orange">
+				<NuxtLink v-if="index !== breadCrumbs().length-1" :to="{name: crumb.component}" class="flex flex-nowrap gap-1 items-center">
           <!-- home icon -->
-					<hone v-if="index === 0" />
+					<icon-home v-if="index === 0" />
           <!-- greater than icon -->
-					<greater-than v-else />
-					{{crumb.name}}
+					<icon-greater-than v-else />
+          <span class="font-medium text-orange hover:text-orange-500 dark:text-gray-400 dark:hover:text-orange">
+					  {{crumb.name}}
+          </span>
 				</NuxtLink>
         <!-- creates a non linked crumb -->
-				<div v-else class="flex items-center">
+				<div v-else class="flex flex-nowrap items-center gap-2">
           <!-- home icon -->
-					<hone v-if="index === 0" />
+					<icon-home v-if="index === 0" />
 					<!-- greater than icon -->
-					<greater-than v-else />
-					<span class="ml-1 font-bold md:ml-2 dark:text-orange-700">{{crumb.name}}</span>
+					<icon-greater-than v-else />
+					<span class="font-bold dark:text-orange-700">{{crumb.name}}</span>
 				</div>
 			</li>
 		</ol>
@@ -31,10 +33,17 @@
 <script lang="ts">
 import Vue from 'vue'
 import navigationLinkType from '@/dataTypes/navigationLinkType'
+import IconHome from "~/components/icons/home.vue"
+import IconGreaterThan from "~/components/icons/greaterThan.vue"
 
 export default Vue.extend({
   
   name: 'Breadcrumbs',
+
+  components: {
+    IconHome,
+    IconGreaterThan,
+  },
   
   props: {
     nav: {
