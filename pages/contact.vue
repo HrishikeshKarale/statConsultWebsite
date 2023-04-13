@@ -1,14 +1,12 @@
 <template>
   <article class="flex flex-col gap-8">
     <h1 class="flex flex-row flex-nowrap items-center gap-4 h-32 px-16 font-medium leading-tight text-5xl m-0 text-gray-800 bg-gradient-to-r from-orange-500 to-orange-200">
-      <span class="font-bold">Contact</span>Me
+      GET IN TOUCH WITH US
     </h1>
+    <!-- component -->
+    <!-- <link rel="stylesheet" href="https://cdn.tailgrids.com/tailgrids-fallback.css" /> -->
 
-    <p class="text-base font-light leading-relaxed mt-0 mb-4 px-16">
-      Visit us or simply send us an email anytime you want. If you have any questions, please feel free to contact us.
-    </p>
-
-    <section class="flex flex-row flex-nowrap  justify-start gap-16 px-16">
+    <section class="flex flex-row flex-nowrap justify-start gap-16 px-16 mt-16">
       <!-- <modal title="Contact form"> -->
       <form class="flex flex-col gap-4 w-fit">
         <h4 class="font-medium leading-tight text-2xl text-gray-800">
@@ -23,7 +21,7 @@
               v-model="sender"
               type="text"
               name="floating_first_name"
-              class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+              class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-blue dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
               placeholder=" "
               required
             >
@@ -41,7 +39,7 @@
               v-model="email"
               type="email"
               name="floating_email"
-              class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+              class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-blue dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
               placeholder=" "
               required
             >
@@ -60,7 +58,7 @@
               type="tel"
               pattern="[0-9]{3}[0-9]{3}[0-9]{4}"
               name="floating_phone"
-              class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+              class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-blue dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
               placeholder=" "
               required
             >
@@ -118,7 +116,7 @@
               v-model="comment"
               name="floating_company"
               rows="2"
-              class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+              class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-blue dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
               placeholder=" "
               required
             />
@@ -145,12 +143,15 @@
         </p>
         <button
           type="button"
-          class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+          class="text-blue bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
           @click="emailSender()"
         >
           Connect
         </button>
       </form>
+      <!-- </modal> -->
+    </section>
+    <section class="flex flex-row flex-nowrap  justify-start gap-16 px-16">
       <div class="flex flex-col gap-8 justify-start w-fit">
         <div class="">
           <h4 class="font-medium leading-tight text-2xl m-0 text-gray-800">
@@ -191,41 +192,28 @@
             spam calls
           </small>
         </div>
-        <div class="address">
-          <h4 class="font-medium leading-tight text-2xl m-0 text-gray-800">
-            Postal Address
-            <!-- <vue-clipboard
-								id="address"
-								copy="44 Crittenden Way,
-											Apartment 2,
-											Rochester, NY 14623."
-								category="icon"
-							/> -->
-          </h4>
-          <address>
-            44 Crittenden Way,
-            <br>
-            Apartment 2,
-            <br>
-            Rochester, NY 14623.
-          </address>
-        </div>
       </div>
-      <!-- </modal> -->
     </section>
+    <!-- <section class="flex flex-row flex-nowrap  justify-start gap-16 px-16">
+      <iframe
+        src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23ffffff&ctz=Asia%2FKolkata&showTitle=1&src=aHJpc2hpcmljaDYxOUBnbWFpbC5jb20&src=YWRkcmVzc2Jvb2sjY29udGFjdHNAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&src=ZW4uaW5kaWFuI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&src=ZW4udXNhI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&color=%23EF6C00&color=%237986CB&color=%233F51B5&color=%237986CB"
+        style="border:solid 1px #777"
+        width="800"
+        height="600"
+        frameborder="0"
+        scrolling="no"
+      />
+    </section> -->
   </article>
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
-// import Modal from '~/components/modal.vue'
 // import sendMail from "~/js/sendMail"
 import axios from 'axios'
 
 export default Vue.extend({
   name: 'Contact',
-
-  // components: { Modal },
 
   layout: 'masterSlave',
 
@@ -260,13 +248,15 @@ export default Vue.extend({
       await axios.post(
         'https://us-central1-portfolio-website-689b4.cloudfunctions.net/router/api/notification/email',
         {
-          to: 'hrishirich619@gmail.com',
+          target: process.env.TARGET,
+          to: process.env.SENDER_EMAIL_PASSWORD,
           name: this.sender,
-          subject: 'Kkiokio.com Contact Form',
-    				cc: this.email,
+          subject: `Precision point: Contact Request by ${this.sender}`,
+          email: this.email,
           phoneNumber: this.phone,
+          source: process.env.SOURCE,
           preffered: this.preffered,
-          content: this.comment
+          message: this.comment
         }
         // this.CONFIG
       )

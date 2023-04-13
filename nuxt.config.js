@@ -21,10 +21,10 @@ export default {
     '@/assets/css/main.css'
   ],
 
-  //
+  // need to include icons to be used in the files
   fontawesome: {
     icons: {
-      solid: ['faChevronDown', 'faPhone'],
+      solid: true,
       regular: [],
       brands: ['faTwitter', 'faInstagram']
     }
@@ -59,16 +59,16 @@ export default {
       '@nuxtjs/firebase',
       {
         config: {
-          apiKey: process.env.FIREBASE_API_KEY | "",
-          authDomain: process.env.FIREBASE_AUTH_DOMAIN | "",
-          projectId: process.env.FIREBASE_PROJECT_ID | "",
-          storageBucket: process.env.FIREBASE_STORAGE_BUCKET | "",
-          messagingSenderId: process.env.FIREBASE_MESSAGINS_SENDER_ID | "",
-          appId: process.env.FIREBASE_APP_ID | "",
-          measurementId: process.env.FIREBASE_MEASUREMENT_ID | "",
+          apiKey: process.env.FIREBASE_API_KEY | '',
+          authDomain: process.env.FIREBASE_AUTH_DOMAIN | '',
+          projectId: process.env.FIREBASE_PROJECT_ID | '',
+          storageBucket: process.env.FIREBASE_STORAGE_BUCKET | '',
+          messagingSenderId: process.env.FIREBASE_MESSAGINS_SENDER_ID | '',
+          appId: process.env.FIREBASE_APP_ID | '',
+          measurementId: process.env.FIREBASE_MEASUREMENT_ID | ''
         },
         services: {
-          hosting: true,
+          hosting: true
           // analytics: true,
           // auth: true // Just as example. Can be any other service.
         }
@@ -106,14 +106,14 @@ export default {
     senderID: process.env.SENDER_EMAIL_ID | false,
     senderPassword: process.env.SENDER_EMAIL_PASSWORD | false,
     // firebase
-    apiKey: process.env.FIREBASE_API_KEY | "",
-    authDomain: process.env.FIREBASE_AUTH_DOMAIN | "",
-    projectId: process.env.FIREBASE_PROJECT_ID | "",
-    storageBucket: process.env.FIREBASE_STORAGE_BUCKET | "",
-    messagingSenderId: process.env.FIREBASE_MESSAGINS_SENDER_ID | "",
-    appId: process.env.FIREBASE_APP_ID | "",
-    measurementId: process.env.FIREBASE_MEASUREMENT_ID | "",
-  },
+    apiKey: process.env.FIREBASE_API_KEY | '',
+    authDomain: process.env.FIREBASE_AUTH_DOMAIN | '',
+    projectId: process.env.FIREBASE_PROJECT_ID | '',
+    storageBucket: process.env.FIREBASE_STORAGE_BUCKET | '',
+    messagingSenderId: process.env.FIREBASE_MESSAGINS_SENDER_ID | '',
+    appId: process.env.FIREBASE_APP_ID | '',
+    measurementId: process.env.FIREBASE_MEASUREMENT_ID | ''
+  }
 
   // https://firebase.nuxtjs.org/guide/options
   // required only when firebase services are turned on
